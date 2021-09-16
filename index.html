@@ -4,14 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Portafolio</title>
 </head>
 <body>
-    <header></header>
-    
-    <nav></nav>
 
-    <aside></aside>
+    <aside class="menu-aside" id="menu-aside">
+
+        <div class="div-menu-aside">
+           <img  class="img-user-aside" src="./assets/image/photoPerfil.png" />
+        </div>
+        <p class="name">Rogelio Adrian Chacon Orozco</p>
+        
+
+        <ul class="aside-menu">
+            <li class="aside-menu-list"><a class="aside-menu-link" href="">item shsihishis</a></li>
+            <li class="aside-menu-list"><a class="aside-menu-link" href="">item ushishshsh</a></li>
+            <li class="aside-menu-list"><a class="aside-menu-link" href="">item sihsishishos</a></li>
+        </ul>
+
+    </aside>
+    
+    <header class="header">
+
+        <div class="header-div">
+
+            <div class="div-img-user">
+                <img  class="img-user" src="./assets/image/photoPerfil.png" />
+            </div>
+
+            <h1 class="user-name">Rogelio Adrian Chacon Orozco</h1>
+
+            
+
+            <ul class="menu">
+                <li class="menu-list"><a class="menu-link">Knowledge</a></li>
+                <li class="menu-list"><a class="menu-link">Sobre mi</a></li>
+            </ul>
+
+            
+            
+        </div>
+
+        <div class="toggle-menu" id="toggle" >
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+    </header>
+
+
+    <nav class="nav" >
+        
+    </nav>
+
+    
 
     <section>
         <article></article>
@@ -20,5 +68,29 @@
     <footer>
 
     </footer>
+
+    <script>
+        
+        const toggle = document.getElementById("toggle");
+        const menu = document.getElementById("menu-aside");
+
+        toggle.addEventListener("click",()=>{
+            
+            toggle.classList.toggle("change")
+
+            if(toggle.className=="toggle-menu"){
+                menu.style.display="none";
+            }else{
+                menu.style.display="block";
+            }
+            
+
+        })
+
+        
+
+        
+
+    </script>
 </body>
 </html>
