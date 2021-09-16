@@ -95,35 +95,61 @@
         
         let dato=0;
 
-        const arrayImages = ["./assets/image/photoPerfil.png"];
+        const arrayImages = ["https://d3tf9yuhsp2bpn.cloudfront.net/images/2020/09/29/20200929-1601381594-tours-de-noche-categorias-guadalajara-tuexperiencia.jpg","./assets/image/monterey.png"];
 
         carrusel.style.backgroundRepeat="no-repeat";
-        carrusel.style.backgroundSize=" 100% 300px";
+        carrusel.style.backgroundSize=" 100% 100%";
+        
+        //carrusel.style.backgroundAttachment="local";
         carrusel.style.backgroundImage="url('"+arrayImages[dato]+"')";
 
 
         arrowLeft.addEventListener("click",()=>{
             
+            clearInterval(changeImage)
+
             dato--;
 
             if(dato===-1){
                 dato=arrayImages.length-1;
             }
-            
+            carrusel.style.transition="all .5s .2s";
+            carrusel.style.transitionTimingFunction="steps(6,end)";
             carrusel.style.backgroundImage="url('"+arrayImages[dato]+"')";
-
+            
+            
         })
 
         arrowRight.addEventListener("click",()=>{
             
+           
+
             dato++;
             
             if(dato===(arrayImages.length)){
                 dato=0;
             }
 
+            carrusel.style.transition="all .5s .2s";
+            carrusel.style.transitionTimingFunction="steps(6,end)";
             carrusel.style.backgroundImage="url('"+arrayImages[dato]+"')";
+
+            
         })
+        
+
+        const changeImage = setInterval(()=>{
+            dato++;
+            if(dato===arrayImages.length)
+                dato=0;
+            
+            
+            
+            carrusel.style.transition="all .5s .2s";
+            carrusel.style.transitionTimingFunction="steps(6,end)";
+            carrusel.style.backgroundImage="url('"+arrayImages[dato]+"')";
+
+        },6000)
 
         
 
