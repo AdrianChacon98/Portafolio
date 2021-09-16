@@ -290,5 +290,43 @@
         height: 300px;
         background-color: orange;
     }
+
+    .arrow-left , .arrow-right{
+        content:'';
+        width: 50px;
+        height: 50px;
+
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    
+
+    .arrow-left{
+        position: relative;
+        top:110px;
+        left: 2%;
+        transform: rotate(140deg);
+    }
+
+    .arrow-left:hover{
+        border: solid #333;
+        border-width: 0 3px 3px 0;
+    }
+
+    .arrow-right{
+        position: relative;
+        left: 90%;
+        top:110px;
+        transform: rotate(-50deg);
+    }
+
+    .arrow-right:hover{
+        border: solid #333;
+        border-width: 0 3px 3px 0;
+    }
+   
     
 }

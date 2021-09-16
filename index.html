@@ -55,8 +55,9 @@
     </header>
 
 
-    <nav class="nav" >
-        
+    <nav class="nav" id="carrusel">
+        <div class="arrow-left" id="arrow-left"></div>
+        <div class="arrow-right" id="arrow-right"></div>
     </nav>
 
     
@@ -87,7 +88,42 @@
 
         })
 
+
+        const arrowLeft = document.getElementById("arrow-left");
+        const arrowRight = document.getElementById("arrow-right");
+        const carrusel = document.getElementById("carrusel");
         
+        let dato=0;
+
+        const arrayImages = ["./assets/image/photoPerfil.png"];
+
+        carrusel.style.backgroundRepeat="no-repeat";
+        carrusel.style.backgroundSize=" 100% 300px";
+        carrusel.style.backgroundImage="url('"+arrayImages[dato]+"')";
+
+
+        arrowLeft.addEventListener("click",()=>{
+            
+            dato--;
+
+            if(dato===-1){
+                dato=arrayImages.length-1;
+            }
+            
+            carrusel.style.backgroundImage="url('"+arrayImages[dato]+"')";
+
+        })
+
+        arrowRight.addEventListener("click",()=>{
+            
+            dato++;
+            
+            if(dato===(arrayImages.length)){
+                dato=0;
+            }
+
+            carrusel.style.backgroundImage="url('"+arrayImages[dato]+"')";
+        })
 
         
 
