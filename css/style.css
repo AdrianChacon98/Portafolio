@@ -140,6 +140,167 @@
     }
     
 
+    /*nav*/
+    .nav{
+        width: 100%;
+        height: 300px;
+
+    }
+
+    .arrow-left , .arrow-right{
+        content:'';
+        width: 50px;
+        height: 50px;
+
+        border: solid black;
+        border-width: 0 4px 4px 0;
+        display: inline-block;
+        padding: 1rem;
+    
+    }
+
+    .arrow-left{
+        position: relative;
+        top:125px;
+        left: 2%;
+        transform: rotate(140deg);
+        
+    }
+
+    .arrow-left:hover{
+        border: solid #fff;
+        border-width: 0 5px 5px 0;
+        
+    }
+
+    .arrow-right{
+        position: relative;
+        left: 75%;
+        
+        top:125px;
+        transform: rotate(-50deg);
+    }
+
+    .arrow-right:hover{
+        border: solid #fff;
+        border-width: 0 5px 5px 0;
+    }
+
+    .transition{
+        transition: all .5s 2s;
+    }
+
+
+    /*Informacion*/
+    .section{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+
+    }
+    .article{
+        width: 100%;
+        height: max-content;
+        padding-left: 10px;
+    }
+
+    .subtitulo{
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding-bottom: 10px;
+        color: #111;
+    }
+
+    .informacion{
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        line-height: 1.5;
+        padding-bottom: 10px;
+        color: #333;
+    }
+
+    .menu-conocimiento{
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding-left: 20px;
+
+    }
+
+    .menu-conocimiento-list{
+        list-style:square;
+        line-height: 1.5;
+        color: #333;
+    }
+
+    .menu-conocimiento .menu-conocimiento{
+        padding-left: 50px;
+    }
+
+    .tec-img
+    {
+        width: 400px;
+        height: 400px;
+    }
+
+
+    /*Footer*/
+    .footer{
+        width: 100%;
+        height: 500px;
+        background-color: #333;
+        color: #ddd;
+        display: flex;
+
+        flex-direction: column;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        line-height: 1.5;
+        
+
+    }
+    
+    .footer-div-info{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-top: 15px;
+
+
+    }
+
+    .footer-div-icon{
+        width: 100%;
+        height: 100%;
+        padding-left: 20px;
+    }
+    .icon{
+        padding: 10px;
+        cursor: pointer;
+        margin-right: 40px;
+    }
+    .correo{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+ 
+
+    .copy{
+        margin-top: 65px;
+        display: none;
+    }
+    
+    .copy-600{
+        display: block;
+    }
+
+
+
+
 }
 
 @media screen and (min-width:600px) {
@@ -251,6 +412,9 @@
         border-width: 0 5px 5px 0;
     }
 
+    .transition{
+        transition: all .5s 2s;
+    }
 
     /*Informacion*/
     .section{
@@ -301,9 +465,64 @@
         padding-left: 50px;
     }
 
+    .tec-img
+    {
+        width: 550px;
+        height: 550px;
+    }
 
 
 
+    /*Footer*/
+    .footer{
+        width: 100%;
+        height: 500px;
+        background-color: #333;
+        color: #ddd;
+        display: flex;
+        flex-direction: column;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        line-height: 1.5;
+
+    }
+    
+    .footer-div-info{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-top: 15px;
+
+
+    }
+
+    .footer-div-icon{
+        width: 100%;
+        height: 100%;
+        padding-left: 20px;
+        padding-top: 15px;
+    }
+    .icon{
+        padding: 10px;
+        cursor: pointer;
+        margin-right: 40px;
+    }
+    .correo{
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+ 
+
+    .copy{
+        margin-top: 65px;
+        display: none;
+    }
+    
+    .copy-600{
+        display: block;
+        
+    }
 
 
 
@@ -322,6 +541,8 @@
         width: var(--header-width);
         height: var(--header-height);
         border-bottom: 1px solid #333;
+        position: fixed;
+        background-color: #fff;
         
 
     }
@@ -440,10 +661,14 @@
         border: solid #fff;
         border-width: 0 5px 5px 0;
     }
+    .transition{
+        transition: all .5s 2s;
+    }
 
     /*Informacion*/
     .section{
         display: flex;
+        flex-direction: row;
         width: 100%;
         justify-content: space-between;
         padding-top: 20px;
@@ -488,16 +713,21 @@
         padding-left: 50px;
     }
     
+    .tec-img
+    {
+        width: 550px;
+        height: 550px;
+    }
     
     /*Footer*/
     .footer{
         width: 100%;
-        height: 240px;
+        height: max-content;
         background-color: #333;
         color: #ddd;
 
         display: flex;
-
+        flex-direction: row;
         font-family: Georgia, 'Times New Roman', Times, serif;
         line-height: 1.5;
 
@@ -533,7 +763,13 @@
 
     .copy{
         margin-top: 65px;
+        display: block;
     }
+
+    .copy-600{
+        display: none;
+    }
+
    
     
 }
