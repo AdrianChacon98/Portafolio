@@ -1,6 +1,16 @@
 const header= document.getElementById("header")
 
 window.addEventListener("scroll",()=>{
-    console.log(window.scrollY)
+
+    if(window.scrollY>70){
+        
+        header.classList.add("positionFixed")
+    }
+
+    if(window.scrollY<10)
+    {
+        header.classList.remove("positionFixed")
+    }
+
     
 })
